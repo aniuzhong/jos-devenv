@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 RUN apt-get update && \
     apt-get install -y build-essential gdb gcc-multilib
 
-# stage 2: QEMU Emulator 
+# stage 2: QEMU Emulator
 RUN apt-get install -y git
 # RUN git clone https://github.com/mit-pdos/6.828-qemu.git qemu
 ADD qemu.tar.gz /root/
@@ -22,8 +22,8 @@ RUN cd /root/qemu && \
     cd /root && rm -rf qemu
 
 # stage 3: gdbgui
-RUN apt-get install -y python3 python3-pip 
-RUN pip3 install gdbgui
+RUN apt-get install -y python3 python3-pip
+RUN pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple gdbgui
 
 # Others
 RUN apt-get install -y bsdmainutils
