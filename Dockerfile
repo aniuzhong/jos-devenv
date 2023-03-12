@@ -31,5 +31,5 @@ RUN apt-get install -y pax-utils
 RUN apt-get install -y execstack
 RUN apt-get install -y elfutils
 
-RUN mkdir -p /root/jos
+RUN mkdir -p /root/JOS
 RUN rm -rf /var/lib/apt/lists/*
