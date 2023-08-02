@@ -6,8 +6,7 @@ RUN apt-get update && \
 
 # stage 2: QEMU Emulator
 RUN apt-get install -y git
-# RUN git clone https://github.com/mit-pdos/6.828-qemu.git qemu
-ADD qemu.tar.gz /root/
+RUN git clone https://github.com/mit-pdos/6.828-qemu.git /root/qemu
 RUN apt-get install -y python && \
     apt-get install -y libtool-bin && \
     apt-get install -y pkg-config && \
